@@ -1,0 +1,92 @@
+.cartContainer {
+	max-width: 800px;
+	margin: auto;
+	padding: 1rem;
+}
+.totalCart {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.cartItem {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+	border-bottom: 1px solid #ddd;
+}
+.cartImage {
+	width: 150px;
+	height: auto;
+	object-fit: cover;
+}
+.itemDetails {
+	flex: 1;
+}
+.cartControls {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+.cartControls button {
+	width: 30px;
+	height: 30px;
+}
+.removeBtn {
+	background: #e74c3c;
+	color: white;
+	padding: 0.5rem 1rem;
+	border: none;
+	cursor: pointer;
+}
+.clearCartBtn {
+	background: rgb(221, 15, 15);
+	color: white;
+	padding: 0.7rem 1.5rem;
+	border: none;
+	cursor: pointer;
+	display: block;
+	margin: 1rem auto;
+}
+@media (max-width: 600px) {
+	.cartContainer {
+		max-width: 600px;
+		padding: 0.6rem;
+	}
+	.cartItem {
+		gap: 0.6rem;
+		padding: 0.6rem;
+	}
+	.cartControls {
+		gap: 0.41rem;
+	}
+	.cartControls button {
+		width: 25px;
+		height: 25px;
+		padding: 2px;
+	}
+	.removeBtn {
+		padding: 0.40rem 0.75rem;
+		font-size: 0.75rem;
+	}
+	.itemDetails h3 {
+		font-size: 1.15rem;
+		margin: 0px;
+	}
+	.itemDetails p {
+		font-size: 1rem;
+	}
+	.cartImage {
+		width: 100px;
+		height: auto;
+		object-fit: cover;
+	}
+	.clearCartBtn {
+		padding: 0.5rem 1rem;
+		font-size: 1rem;
+	}
+	.cartContainer h1 {
+		font-size: 1.5rem;
+		padding-right: 5px;
+	}
+}

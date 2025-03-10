@@ -1,0 +1,23 @@
+.filters {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	margin: 1rem 0rem;
+}
+.filters select {
+	padding: 0.5rem;
+	border: 1px solid #ddd;
+	border-radius: 0.2rem;
+	font-size: 1rem;
+}
+@media (max-width: 600px) {
+	.filters {
+		gap: 0.5rem;
+		margin: 0.5rem 0rem;
+	}
+	.filters select {
+		padding: 0.40rem;
+		font-size: 0.7rem;
+		width: 31%;
+	}
+}
