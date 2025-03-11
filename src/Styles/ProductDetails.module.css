@@ -5,6 +5,10 @@
 	max-width: 900px;
 	margin: auto;
 }
+.backbutton {
+	position: fixed;
+	font-size: 1.15rem;
+}
 .imageContainer img {
 	width: 320px;
 	border-radius: 0.5rem;
@@ -13,7 +17,7 @@
 .detailsContainer {
 	flex: 1;
 }
-button {
+.addToCart {
 	padding: 0.6rem;
 	background: #f39c12;
 	color: white;
@@ -23,7 +27,7 @@ button {
 	margin-top: 1rem;
 	transition: 0.3s;
 }
-button:hover {
+.addToCart:hover {
 	background: #e67e22;
 }
 @media (max-width: 600px) {

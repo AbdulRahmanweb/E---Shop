@@ -1,0 +1,12 @@
+.successPage {
+	text-align: center;
+	padding: 50px;
+}
+.goBackBtn {
+	background: #007bff;
+	color: white;
+	padding: 0.5rem 1rem;
+	border: none;
+	cursor: pointer;
+	margin-top: 1rem;
+}

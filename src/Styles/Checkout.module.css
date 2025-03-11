@@ -1,0 +1,25 @@
+.checkoutPage {
+	padding: 1rem;
+	max-width: 500px;
+	margin: auto;
+}
+.summary {
+	background: rgb(63, 63, 63);
+	padding: 15px;
+	border-radius: 5px;
+	margin-bottom: 1rem;
+}
+.form input,
+.form select {
+	width: 100%;
+	margin-bottom: 0.6rem;
+	padding: 10px;
+	border: 1px solid rgb(75, 75, 75);
+}
+.placeOrderBtn {
+	background: #007bff;
+	color: white;
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+}
