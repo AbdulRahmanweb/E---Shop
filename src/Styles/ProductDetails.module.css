@@ -5,12 +5,12 @@
 	max-width: 900px;
 	margin: auto;
 }
-.backbutton {
+/*.backbutton {
 	position: absolute;
 	font-size: 1.5rem;
 	padding: 0px;
 	cursor: pointer;
-}
+}*/
 .imageContainer img {
 	width: 320px;
 	border-radius: 0.5rem;
@@ -32,7 +32,42 @@
 .addToCart:hover {
 	background: #e67e22;
 }
-@media (max-width: 600px) {
+.reviews {
+	margin-top: 1rem;
+	padding: 15px 5px;
+	background: rgb(48, 48, 48);
+	border-radius: 5px;
+}
+.reviewItem {
+	border-bottom: 1px solid #ddd;
+	margin: 0px;
+}
+.rating {
+	margin: 0px;
+	font-size: 0.60rem;
+}
+.date {
+	margin: 0px;
+	font-size: 0.60rem;
+}
+.name {
+	font-size: 1.15rem;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+.comment {
+	font-size: 1rem;
+	margin-top: 5px;
+}
+.reviewItem:last-child {
+	border-bottom: none;
+}
+.email {
+	font-size: 0.75rem;
+
+}
+
+@media (max-width: 768px) {
 	.productDetails {
 		 flex-direction: column;
 		 align-items: center;
