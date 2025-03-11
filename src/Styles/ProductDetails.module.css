@@ -6,8 +6,10 @@
 	margin: auto;
 }
 .backbutton {
-	position: fixed;
-	font-size: 1.15rem;
+	position: absolute;
+	font-size: 1.5rem;
+	padding: 0px;
+	cursor: pointer;
 }
 .imageContainer img {
 	width: 320px;

@@ -13,7 +13,7 @@ const Cart = () => {
 
 	return (
 		<div className={styles.cartContainer}>
-			<button style={{fontSize: "1.15rem"}} onClick={() => navigate('/')}>↩</button>
+			<button style={{fontSize: "1.5rem", padding: "0px"}} onClick={() => navigate('/')}>↩</button>
 			<div className={styles.totalCart}>
 		<h1>Your Cart</h1>
 		{ cartItems.length > 0 && <h2><strong>Total:</strong> ${total.toFixed(2)}</h2>}

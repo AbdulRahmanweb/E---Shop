@@ -31,7 +31,7 @@ const Checkout = () => {
 
 	return (
 		<div className={styles.checkoutPage}>
-			<button style={{fontSize: "1.15rem"}} onClick={() => navigate('/cart')}>↩</button>
+			<button style={{fontSize: "1.5rem", padding: "0px"}} onClick={() => navigate('/cart')}>↩</button>
 			<h1>Checkout</h1>
 			<div className={styles.summary}>
 				<h2>Order Summary</h2>
