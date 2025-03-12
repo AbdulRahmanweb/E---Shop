@@ -14,19 +14,7 @@ const ProductDetails = () => {
 	<span className='btnBox'><button style={{fontSize: "1.5rem", marginLeft: "5px"}} onClick={() => navigate('/')}>↩</button></span>
 		<div className={styles.productDetails}>
 			<div className={styles.imageContainer}>
-			<img src={product.thumbnail} alt={product.title} /></div>
-			<div className={styles.detailsContainer}>
-			<h3>{product.title}</h3>
-			<p><strong>Price:</strong> ${product.price}</p>
-			<p><strong>Brand:</strong> {product.brand}</p>
-			<p><strong>Category:</strong> {product.category}</p>
-			<p><strong>Rating</strong> {product.rating}</p>
-			<p><strong>Available: </strong> {product.availabilityStatus}</p>
-			<p><strong>Description: </strong> {product.description}</p>
-			<p><strong>ReturnPolicy:</strong> {product.returnPolicy}</p>
-			<p><strong>WarrantyInformation:</strong> {product.warrantyInformation}</p>
-			<p><strong>ShippingInformation:</strong> {product.shippingInformation}</p>
-			<button className={styles.addToCart} onClick={() => dispatch(addToCart(product))}>Add To Cart</button>
+			<img src={product.thumbnail} alt={product.title} />
 			<p style={{marginTop: "32px"}}><strong>Rating and reviews</strong></p>
 			<div className={styles.reviews}>
 				{product.reviews && product.reviews.length > 0 ? (
@@ -41,6 +29,19 @@ const ProductDetails = () => {
 							<p>No reviews yet</p>
 						)}
 			</div>
+			</div>
+			<div className={styles.detailsContainer}>
+			<h3>{product.title}</h3>
+			<p><strong>Price:</strong> ${product.price}</p>
+			<p><strong>Brand:</strong> {product.brand}</p>
+			<p><strong>Category:</strong> {product.category}</p>
+			<p><strong>Rating</strong> {product.rating}</p>
+			<p><strong>Available: </strong> {product.availabilityStatus}</p>
+			<p><strong>Description: </strong> {product.description}</p>
+			<p><strong>ReturnPolicy:</strong> {product.returnPolicy}</p>
+			<p><strong>WarrantyInformation:</strong> {product.warrantyInformation}</p>
+			<p><strong>ShippingInformation:</strong> {product.shippingInformation}</p>
+			<button className={styles.addToCart} onClick={() => dispatch(addToCart(product))}>Add To Cart</button>
 			</div>
 			</div>
 			</>);

@@ -6,9 +6,13 @@
 }
 .filters select {
 	padding: 0.5rem;
-	border: 1px solid #ddd;
+	border: 1px solid gray;
 	border-radius: 0.2rem;
 	font-size: 1rem;
+}
+.dark select {
+	background: #333;
+	color: white;
 }
 @media (max-width: 600px) {
 	.filters {

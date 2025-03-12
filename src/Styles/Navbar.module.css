@@ -3,15 +3,21 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 0.7rem 1rem;
-	background: #333;
-	color: white;
+	background: white;
+	color: black;
 	flex-wrap: wrap;
 }
-.logo a {
+.dark {
+	background: black;
+	color: white;
+}
+.logo a{
 	font-size: 1.5rem;
 	font-weight: bold;
-	color: white;
 	text-decoration: none;
+}
+.dark .logo {
+	color: white;
 }
 .cart {
 	display: flex;
@@ -19,11 +25,11 @@
 	gap: 10px;
 
 }
-.cart a {
-	color: white;
+.cart a{
 	font-size: 1.15rem;
 	text-decoration: none;
 	font-weight: bold;
+	text-decoration: none;
 }
 .cartCount {
 	background: red;
@@ -38,12 +44,19 @@
 	max-width: 100%;
 	border-radius: 5px;
 	border: 1px solid gray;
+	color: black;
 	font-size: 1rem;
 }
-::placeholder {
-	color: rgb(245, 245, 245);
+.dark .search {
+	background: #333;
+	color: white;
 }
-
+.dark ::placeholder {
+	color: white;
+}
+.dark a {
+	color: white;
+}
 @media (max-width: 768px) {
 	.navbar {
 		flex-direction: column;

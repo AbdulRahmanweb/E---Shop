@@ -10,6 +10,8 @@ const Home = () => {
 	const {filteredProducts, loading, error, } = useSelector((state) => state.products);
 	console.log(filteredProducts)
 
+	const darkmode = useSelector((state) => state.theme.darkmode);
+
 	useEffect(() => {
 		dispatch(fetchProducts());
 	}, [dispatch]);
@@ -21,7 +23,7 @@ const Home = () => {
 		<Filters />
 		<div className={styles.productList}>
 			{filteredProducts.map((product) => (
-				<Link className={styles.productCard} to={`/product/${product.id}`} key={product.id}>
+				<Link className={`${styles.productCard} ${darkmode ? styles.dark : ""}`} to={`/product/${product.id}`} key={product.id}>
 					<img src={product.thumbnail} alt={product.title} />
 					<h3>{product.title}</h3>
 					<p className={styles.price}><strong>Price</strong> ${product.price}</p>

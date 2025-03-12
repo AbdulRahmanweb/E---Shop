@@ -27,8 +27,8 @@ const Cart = () => {
 							<h3>{item.title}</h3>
 							<p><strong>Price:</strong> ${item.price}</p>
 							<div className={styles.cartControls}>
-								<button style={{background: "gray", border: "none", cursor: "pointer"}} onClick={() => dispatch(decreaseQuantity(item.id))}>-</button><span>{item.quantity}</span>
-								<button style={{background: "gray", border: "none", cursor: "pointer"}} onClick={() => dispatch(increaseQuantity(item.id))}>+</button>
+								<button style={{background: "gray", border: "none", cursor: "pointer", color: "white", fontSize: "1.5rem"}} onClick={() => dispatch(decreaseQuantity(item.id))}>-</button><span>{item.quantity}</span>
+								<button style={{background: "gray", border: "none", cursor: "pointer", color: "white", fontSize: "1.5rem"}} onClick={() => dispatch(increaseQuantity(item.id))}>+</button>
 							</div>
 							<button className={styles.removeBtn} onClick={() => dispatch(removeFromCart(item.id))}>Remove</button>
 						</div>

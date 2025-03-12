@@ -4,14 +4,14 @@
 	margin: auto;
 }
 .summary {
-	background: rgb(63, 63, 63);
 	padding: 15px;
 	border-radius: 5px;
 	margin-bottom: 1rem;
+	border: 1px solid gray;
 }
 .form input,
 .form select {
-	width: 100%;
+	width: 90%;
 	margin-bottom: 0.6rem;
 	padding: 10px;
 	border: 1px solid rgb(75, 75, 75);

@@ -6,8 +6,9 @@ import styles from  '../Styles/Filter.module.css';
 const Filters = () => {
 	const dispatch = useDispatch();
 	const {category, sortOrder} = useSelector((state) => state.products);
+	const darkmode = useSelector((state) => state.theme.darkmode);
 	return (
-		<div className={styles.filters}>
+		<div className={`${styles.filters} ${darkmode ? styles.dark : ""}`}>
 			<select value={category} onChange={(e) => dispatch(setCategory(e.target.value))}>
 				<option value="all">All Categories</option>
 				<option value="kitchen-accessories">Kitchen-Accessories</option>
