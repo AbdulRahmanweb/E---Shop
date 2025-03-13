@@ -71,14 +71,14 @@
 	.productDetails {
 		gap: 0.5rem;
 		padding: 0.2rem;
-		font-size: 0.6rem;
+		font-size: 0.7rem;
 	}
 	.addToCart {
 		padding: 0.5rem;
 		font-size: 0.5rem;
 	}
 	.imageContainer img {
-		width: 90%;
+		width: 75%;
 	}
 	.rating {
 		margin: 0px;
@@ -109,7 +109,7 @@
 	.productDetails {
 		gap: 0.25rem;
 		padding: 0rem;
-		font-size: 0.5rem;
+		font-size: 0.6rem;
 	}
 	.addToCart {
 		padding: 0.5rem;
