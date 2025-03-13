@@ -6,7 +6,6 @@
 	background: white;
 	color: black;
 	flex-wrap: wrap;
-	border: 1px solid white;
 	
 }
 .dark {
@@ -78,14 +77,14 @@
 		font-size: 1rem;
 	}
 	.cart a{
-		font-size: 0.7rem;
+		font-size: 0.75rem;
 	}
 	.cartCount {
 		font-size: 0.6rem;
 		padding: 1px 4px;
 	}
 	.toggleTheme {
-		padding: 2px 4px;
+		padding: 3px 4px;
 		font-size: 0.5rem;
 	}
 }
