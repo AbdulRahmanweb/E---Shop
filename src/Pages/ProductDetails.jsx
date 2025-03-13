@@ -1,14 +1,26 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { addToCart } from '../Redux-Rtk/cart.Slice';
+import { fetchProducts } from '../Redux-Rtk/productSlice';
 import styles from '../Styles/ProductDetails.module.css';
 
 const ProductDetails = () => {
 	const { id } = useParams();
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	const product = useSelector((state) => state.products.filteredProducts.find((p) => p.id === parseInt(id)));
+
+	useEffect(() => {
+		dispatch(fetchProducts());
+	}, [dispatch]);
+
+	const product = useSelector((state) => {
+		return state.products.filteredProducts.find((p) => p.id === parseInt(id))
+	});
+
+	if (!product) {
+		return <p>Loading product...</p>
+	}
 
 	return (<>
 	<span className='btnBox'><button style={{fontSize: "1.5rem", marginLeft: "5px", marginTop: "5px"}} onClick={() => navigate('/')}>↩</button></span>
