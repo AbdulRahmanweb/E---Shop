@@ -28,8 +28,8 @@ const Navbar = () => {
 			<Link to={'/cart'}>Cart <span className={styles.cartCount}>{cartItems.length}
 			</span>
 			</Link>
-			</div>
 			<button className={styles.toggleTheme} onClick={() => dispatch(toggleTheme())}>{darkmode ? "Light Mode" : "Dark Mode"}</button>
+			</div>
 		</nav>
 	);
 }

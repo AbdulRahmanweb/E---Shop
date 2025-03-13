@@ -11,11 +11,12 @@ const ProductDetails = () => {
 	const product = useSelector((state) => state.products.filteredProducts.find((p) => p.id === parseInt(id)));
 
 	return (<>
-	<span className='btnBox'><button style={{fontSize: "1.5rem", marginLeft: "5px"}} onClick={() => navigate('/')}>↩</button></span>
+	<span className='btnBox'><button style={{fontSize: "1.5rem", marginLeft: "5px", marginTop: "5px"}} onClick={() => navigate('/')}>↩</button></span>
 		<div className={styles.productDetails}>
 			<div className={styles.imageContainer}>
 			<img src={product.thumbnail} alt={product.title} />
-			<p style={{marginTop: "32px"}}><strong>Rating and reviews</strong></p>
+			<button className={styles.addToCart} onClick={() => dispatch(addToCart(product))}>Add To Cart</button>
+			<p className={styles.ratingReviews}><strong>Rating and reviews</strong></p>
 			<div className={styles.reviews}>
 				{product.reviews && product.reviews.length > 0 ? (
 					product.reviews.map((review, index) => (
@@ -41,7 +42,6 @@ const ProductDetails = () => {
 			<p><strong>ReturnPolicy:</strong> {product.returnPolicy}</p>
 			<p><strong>WarrantyInformation:</strong> {product.warrantyInformation}</p>
 			<p><strong>ShippingInformation:</strong> {product.shippingInformation}</p>
-			<button className={styles.addToCart} onClick={() => dispatch(addToCart(product))}>Add To Cart</button>
 			</div>
 			</div>
 			</>);

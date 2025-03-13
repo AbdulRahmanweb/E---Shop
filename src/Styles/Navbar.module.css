@@ -2,10 +2,12 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0.7rem 1rem;
+	padding: 0.5rem 0.6rem;
 	background: white;
 	color: black;
 	flex-wrap: wrap;
+	border: 1px solid white;
+	
 }
 .dark {
 	background: black;
@@ -57,16 +59,33 @@
 .dark a {
 	color: white;
 }
-@media (max-width: 768px) {
+.toggleTheme {
+	border: none;
+	padding: 5px 10px;
+	border-radius: 2px;
+	background: white;
+}
+@media (max-width: 660px) {
 	.navbar {
-		flex-direction: column;
 		align-items: center;
-		gap: 10px;
+		gap: 5px;
 	}
 	.search {
-		width: 75%;
+		width: 100%;
+		order: +1;
 	}
-	.cart {
-		justify-content: center;
+	.logo a{
+		font-size: 1rem;
+	}
+	.cart a{
+		font-size: 0.7rem;
+	}
+	.cartCount {
+		font-size: 0.6rem;
+		padding: 1px 4px;
+	}
+	.toggleTheme {
+		padding: 2px 4px;
+		font-size: 0.5rem;
 	}
 }
