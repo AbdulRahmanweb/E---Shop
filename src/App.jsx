@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React, {useEffect, useMemo} from "react"
 import { Routes, Route } from "react-router-dom"
 import Home from "./Pages/Home"
 import Cart from "./Pages/Cart"
@@ -11,11 +11,15 @@ import { useSelector } from "react-redux"
 
 
 function App() {
+  console.log("App Render");
   const darkMode = useSelector((state) => state.theme.darkmode);
+  const memoizedDarkmode = useMemo(() => darkMode, [darkMode]);
   
   useEffect(() => {
-    document.body.classList.toggle("dark", darkMode);
-  }, [darkMode]);
+    document.body.classList.toggle("dark", memoizedDarkmode);
+  }, [memoizedDarkmode]);
+
+
   return (<>
     <Navbar />
     <Routes>

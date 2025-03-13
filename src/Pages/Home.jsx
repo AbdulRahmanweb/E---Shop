@@ -8,7 +8,6 @@ import styles from '../Styles/Home.module.css';
 const Home = () => {
 	const dispatch = useDispatch();
 	const {filteredProducts, loading, error, } = useSelector((state) => state.products);
-	console.log(filteredProducts)
 
 	const darkmode = useSelector((state) => state.theme.darkmode);
 
