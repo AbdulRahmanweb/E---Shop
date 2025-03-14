@@ -12,6 +12,7 @@ const ProductDetails = () => {
 
 	useEffect(() => {
 		dispatch(fetchProducts());
+		window.scrollTo(0, 0);
 	}, [dispatch]);
 
 	const product = useSelector((state) => {

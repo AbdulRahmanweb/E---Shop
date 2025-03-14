@@ -2,18 +2,32 @@ import React, {useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../Redux-Rtk/productSlice';
 import Filters from '../Components/Filter';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from '../Styles/Home.module.css';
 
 const Home = () => {
+	const location = useLocation();
 	const dispatch = useDispatch();
 	const {filteredProducts, loading, error, } = useSelector((state) => state.products);
 
 	const darkmode = useSelector((state) => state.theme.darkmode);
 
 	useEffect(() => {
-		dispatch(fetchProducts());
-	}, [dispatch]);
+		const savedScrollPosition = sessionStorage.getItem("scrollPosition");
+		if (savedScrollPosition && location.key) {
+			window.scrollTo(0, parseInt(savedScrollPosition));
+		}
+		if (filteredProducts.length === 0) {
+			dispatch(fetchProducts());
+		}
+		const handleScroll = () => {
+			sessionStorage.setItem("scrollPosition", window.scrollY)
+		}
+		window.addEventListener("scroll", handleScroll);
+
+		return () => { window.removeEventListener("scroll", handleScroll)}
+	}, [dispatch, filteredProducts.length, Location.key]);
+
 
 	if (loading) return <p>Loading...</p>
 	if (error) return <p>Error: {error}</p>
