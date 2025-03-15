@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { setSearchQuery } from '../Redux-Rtk/productSlice';
@@ -6,7 +6,6 @@ import { toggleTheme } from '../Redux-Rtk/themeSlice';
 import styles from '../Styles/Navbar.module.css'
 
 const Navbar = () => {
-	console.log("Navbar Render");
 	const dispatch = useDispatch();
 	const cartItems = useSelector((state) => state.cart.cartItems);
 	const [search, setSearch] = useState("");

@@ -6,12 +6,13 @@ import Navbar from "./Components/Navbar"
 import ProductDetails from "./Pages/ProductDetails"
 import Checkout from "./Pages/Checkout"
 import SuccessPage from "./Pages/SuccessPage"
+import Footer from "./Components/Footer"
 import './index.css';
+import styles from './Styles/App.module.css'
 import { useSelector } from "react-redux"
 
 
 function App() {
-  console.log("App Render");
   const darkMode = useSelector((state) => state.theme.darkmode);
   const memoizedDarkmode = useMemo(() => darkMode, [darkMode]);
   
@@ -20,7 +21,8 @@ function App() {
   }, [memoizedDarkmode]);
 
 
-  return (<>
+  return (<div className={styles.wrapper}>
+    <main className={styles.content}>
     <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />
@@ -29,7 +31,9 @@ function App() {
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/success" element={<SuccessPage />} />
     </Routes>
-  </>)
+    </main>
+    <Footer />
+  </div>)
 }
 
 export default App
