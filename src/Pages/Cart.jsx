@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeFromCart, increaseQuantity, decreaseQuantity, /*clearCart*/ } from '../Redux-Rtk/cart.Slice';
 import styles from '../Styles/Cart.module.css';
@@ -10,6 +10,11 @@ const Cart = () => {
 	const subTotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 	const total = subTotal;
 	const navigate = useNavigate();
+
+	useEffect(() => {
+			window.scrollTo(0, 0);
+		}, [dispatch]);
+	
 
 	return (
 		<div className={styles.cartContainer}>
